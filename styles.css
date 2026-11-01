@@ -1,0 +1,475 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap");
+
+:root {
+  color-scheme: light;
+  --ink: #29231f;
+  --muted: #817a73;
+  --cream: #fbf8f2;
+  --paper: #fffdf9;
+  --wine: #8e2840;
+  --lime: #d7ed6c;
+  font-family: "DM Sans", sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--ink);
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.site-header {
+  height: 82px;
+  padding: 0 8.3%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #eae4db;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--ink);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  text-decoration: none;
+}
+
+.brand-mark {
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--wine);
+  color: white;
+  font-family: "Playfair Display", serif;
+  font-size: 18px;
+}
+
+.login-button,
+.submit-button {
+  border: 0;
+  border-radius: 999px;
+  background: var(--ink);
+  color: white;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  transition: background 160ms ease, transform 160ms ease;
+}
+
+.login-button {
+  padding: 11px 22px;
+}
+
+.login-button:hover,
+.submit-button:hover {
+  background: var(--wine);
+  transform: translateY(-1px);
+}
+
+.intro {
+  min-height: 430px;
+  position: relative;
+  overflow: hidden;
+  padding: 84px 12% 72px;
+  background: var(--lime);
+}
+
+.eyebrow {
+  margin: 0 0 14px;
+  color: var(--wine);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+}
+
+.intro h1,
+.section-heading h2,
+.login-form h2 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 500;
+  letter-spacing: -1.5px;
+}
+
+.intro h1 {
+  max-width: 650px;
+  margin: 0;
+  font-size: clamp(48px, 7vw, 78px);
+  line-height: 0.99;
+}
+
+.intro h1 span {
+  color: var(--wine);
+  font-style: italic;
+}
+
+.intro-copy {
+  max-width: 370px;
+  margin: 23px 0 20px;
+  color: #514d35;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.explore-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--ink);
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 5px;
+}
+
+.explore-link span {
+  font-size: 18px;
+}
+
+.intro-spark {
+  position: absolute;
+  right: 12%;
+  bottom: 40px;
+  color: var(--wine);
+  font-size: clamp(90px, 15vw, 190px);
+  line-height: 1;
+  transform: rotate(-12deg);
+}
+
+.wine-section {
+  padding: 76px 8.3% 88px;
+}
+
+.section-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  margin-bottom: 29px;
+}
+
+.section-heading .eyebrow {
+  margin-bottom: 9px;
+}
+
+.section-heading h2 {
+  margin: 0;
+  font-size: clamp(28px, 4vw, 38px);
+}
+
+.wine-count {
+  padding-bottom: 6px;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.wine-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.wine-card {
+  min-height: 350px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #eee8df;
+  border-radius: 5px;
+  background: var(--paper);
+  padding: 22px 23px 20px;
+}
+
+.wine-card--red {
+  --bottle-color: #73253b;
+  --label-color: #f0dfc0;
+  --art-color: #f3e7e2;
+}
+
+.wine-card--white {
+  --bottle-color: #b6a34d;
+  --label-color: #fff6cf;
+  --art-color: #e8f0df;
+}
+
+.wine-card--rose {
+  --bottle-color: #ca6578;
+  --label-color: #fff1dc;
+  --art-color: #f7e5df;
+}
+
+.bottle-art {
+  height: 175px;
+  position: relative;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 3px;
+  background: var(--art-color);
+}
+
+.bottle-neck {
+  width: 23px;
+  height: 47px;
+  position: absolute;
+  top: 21px;
+  z-index: 1;
+  border-radius: 5px 5px 2px 2px;
+  background: var(--bottle-color);
+}
+
+.bottle-body {
+  width: 72px;
+  height: 117px;
+  position: relative;
+  margin-top: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: 14px 14px 17px 17px;
+  background: var(--bottle-color);
+  box-shadow: inset 8px 0 12px #ffffff20, 7px 8px 13px #3223191c;
+}
+
+.bottle-label {
+  width: 52px;
+  padding: 8px 2px;
+  background: var(--label-color);
+  color: var(--wine);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 10px;
+  line-height: 1.15;
+  text-align: center;
+}
+
+.wine-info {
+  padding-top: 19px;
+}
+
+.wine-type {
+  margin: 0 0 5px;
+  color: var(--wine);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+}
+
+.wine-info h3 {
+  margin: 0;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 23px;
+  font-weight: 500;
+}
+
+.wine-description {
+  min-height: 35px;
+  margin: 7px 0 15px;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.wine-meta {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #eee8df;
+  padding-top: 11px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.wine-number {
+  position: absolute;
+  top: 29px;
+  right: 29px;
+  color: #766f6759;
+  font-size: 10px;
+}
+
+.site-footer {
+  min-height: 72px;
+  padding: 20px 8.3%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #eae4db;
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.site-footer span span {
+  color: var(--wine);
+}
+
+.login-dialog {
+  width: min(420px, calc(100% - 32px));
+  padding: 0;
+  border: 0;
+  border-radius: 8px;
+  background: var(--paper);
+  color: var(--ink);
+  box-shadow: 0 20px 70px #241b1840;
+}
+
+.login-dialog::backdrop {
+  background: #211a18a6;
+  backdrop-filter: blur(3px);
+}
+
+.login-form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 38px;
+}
+
+.close-button {
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  border: 0;
+  border-radius: 50%;
+  background: #f1ece5;
+  color: var(--ink);
+  cursor: pointer;
+  font-size: 22px;
+  line-height: 1;
+}
+
+.login-form h2 {
+  margin: 0 0 8px;
+  font-size: 29px;
+}
+
+.form-note {
+  margin: 0 0 23px;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.login-form label {
+  margin: 0 0 7px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.login-form input {
+  width: 100%;
+  margin-bottom: 17px;
+  padding: 12px;
+  border: 1px solid #e5ded4;
+  border-radius: 4px;
+  background: white;
+  color: var(--ink);
+  font-size: 12px;
+}
+
+.login-form input:focus {
+  border-color: var(--wine);
+  outline: 2px solid #8e284026;
+}
+
+.submit-button {
+  margin-top: 5px;
+  padding: 13px 18px;
+}
+
+@media (max-width: 700px) {
+  .site-header {
+    height: 70px;
+    padding: 0 6%;
+  }
+
+  .intro {
+    min-height: 390px;
+    padding: 72px 8% 60px;
+  }
+
+  .intro-spark {
+    right: 7%;
+    bottom: 15px;
+    opacity: 0.65;
+  }
+
+  .wine-section {
+    padding: 58px 6% 65px;
+  }
+
+  .wine-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .wine-card {
+    min-height: 0;
+    display: grid;
+    grid-template-columns: minmax(115px, 0.8fr) 1.2fr;
+    gap: 18px;
+    padding: 14px;
+  }
+
+  .bottle-art {
+    height: 100%;
+    min-height: 175px;
+  }
+
+  .wine-info {
+    align-self: center;
+    padding-top: 0;
+  }
+
+  .wine-number {
+    top: 20px;
+    right: 20px;
+  }
+
+  .site-footer {
+    padding: 18px 6%;
+    gap: 14px;
+    font-size: 9px;
+  }
+}
+
+@media (max-width: 380px) {
+  .wine-card {
+    grid-template-columns: 105px 1fr;
+    gap: 12px;
+    padding: 10px;
+  }
+
+  .wine-info h3 {
+    font-size: 20px;
+  }
+
+  .wine-description {
+    font-size: 10px;
+  }
+
+  .login-form {
+    padding: 34px 25px 28px;
+  }
+}

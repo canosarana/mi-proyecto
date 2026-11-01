@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Una pequeña selección de vinos para descubrir."
+    />
+    <title>La Vinoteca — Vinos con carácter</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#" aria-label="La Vinoteca, inicio">
+        <span class="brand-mark" aria-hidden="true">V</span>
+        <span>la vinoteca</span>
+      </a>
+      <button class="login-button" id="open-login" type="button">Entrar</button>
+    </header>
+
+    <main>
+      <section class="intro" aria-labelledby="page-title">
+        <p class="eyebrow">Una copa, una historia</p>
+        <h1 id="page-title">Vinos para<br />disfrutar <span>sin prisa.</span></h1>
+        <p class="intro-copy">
+          Una pequeña selección de botellas especiales, elegidas para compartir
+          buenos momentos.
+        </p>
+        <a class="explore-link" href="#vinos">Descubre la selección <span aria-hidden="true">↓</span></a>
+        <span class="intro-spark" aria-hidden="true">✳</span>
+      </section>
+
+      <section class="wine-section" id="vinos" aria-labelledby="wine-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Nuestra selección</p>
+            <h2 id="wine-title">Un brindis por lo bueno</h2>
+          </div>
+          <span class="wine-count">03 botellas</span>
+        </div>
+
+        <div class="wine-grid">
+          <article class="wine-card wine-card--red">
+            <div class="bottle-art" aria-hidden="true">
+              <span class="bottle-neck"></span>
+              <span class="bottle-body"><span class="bottle-label">VIÑA<br />LUNA</span></span>
+            </div>
+            <div class="wine-info">
+              <p class="wine-type">Tinto · Rioja</p>
+              <h3>Viña Luna</h3>
+              <p class="wine-description">Fruta madura, especias y tardes largas.</p>
+              <div class="wine-meta"><span>2021</span><span>12,50 €</span></div>
+            </div>
+            <span class="wine-number">01</span>
+          </article>
+
+          <article class="wine-card wine-card--white">
+            <div class="bottle-art" aria-hidden="true">
+              <span class="bottle-neck"></span>
+              <span class="bottle-body"><span class="bottle-label">BRISA<br />SALINA</span></span>
+            </div>
+            <div class="wine-info">
+              <p class="wine-type">Blanco · Rías Baixas</p>
+              <h3>Brisa Salina</h3>
+              <p class="wine-description">Fresco, cítrico y con aire de mar.</p>
+              <div class="wine-meta"><span>2023</span><span>10,90 €</span></div>
+            </div>
+            <span class="wine-number">02</span>
+          </article>
+
+          <article class="wine-card wine-card--rose">
+            <div class="bottle-art" aria-hidden="true">
+              <span class="bottle-neck"></span>
+              <span class="bottle-body"><span class="bottle-label">ROSA<br />BRAVA</span></span>
+            </div>
+            <div class="wine-info">
+              <p class="wine-type">Rosado · Navarra</p>
+              <h3>Rosa Brava</h3>
+              <p class="wine-description">Frutos rojos y un punto divertido.</p>
+              <div class="wine-meta"><span>2022</span><span>11,25 €</span></div>
+            </div>
+            <span class="wine-number">03</span>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Hecho para disfrutar, copa a copa.</span>
+      <span>La Vinoteca <span aria-hidden="true">✳</span> 2026</span>
+    </footer>
+
+    <dialog class="login-dialog" id="login-dialog" aria-labelledby="login-title">
+      <form class="login-form">
+        <button class="close-button" id="close-login" type="button" aria-label="Cerrar formulario">×</button>
+        <p class="eyebrow">Qué bueno verte</p>
+        <h2 id="login-title">Entrar en la vinoteca</h2>
+        <p class="form-note">Este formulario es solo una muestra. No se guardan ni se envían datos.</p>
+        <label for="email">Correo electrónico</label>
+        <input id="email" name="email" type="email" placeholder="tu@correo.com" autocomplete="email" />
+        <label for="password">Contraseña</label>
+        <input id="password" name="password" type="password" placeholder="Tu contraseña" autocomplete="current-password" />
+        <button class="submit-button" type="button">Continuar</button>
+      </form>
+    </dialog>
+  </body>
+</html>
