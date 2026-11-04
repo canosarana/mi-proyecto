@@ -1,6 +1,7 @@
 # La Vinoteca
 
 Página sencilla de muestra para presentar vinos.
+Es solo una página de prueba para aprender Git.
 
 ## Cómo abrirla
 
